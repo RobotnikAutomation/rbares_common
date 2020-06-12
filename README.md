@@ -20,4 +20,3 @@ This package contains the configuration for running the Navigation stack of the 
 ### rb_ares_localization
 
 This package contains the configuration for running AMCL and map_server.
-# rb_ares_common
