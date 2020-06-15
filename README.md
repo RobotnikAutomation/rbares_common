@@ -20,3 +20,7 @@ This package contains the configuration for running the Navigation stack of the 
 ### rbares_localization
 
 This package contains the configuration for running AMCL and map_server.
+
+### rbares_perception
+
+This package contains the launch files and configuration for running locator node.
