@@ -1,5 +1,5 @@
 robotnik_base_control:
-  type: rbares_controller/RbaresController
+  type: rbares_controller/RbAresController
   traction:
     front_right:
       joint_name: $(arg prefix)traction_joint
