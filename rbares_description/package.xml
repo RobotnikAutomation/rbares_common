@@ -22,6 +22,7 @@
   <run_depend>xacro</run_depend>
   <run_depend>robotnik_sensors</run_depend>
   <run_depend>gazebo_ros</run_depend>
+  <run_depend>joint_state_publisher_gui</run_depend>
 
   <export>
       <gazebo_ros gazebo_media_path="package://rbares_description/meshes/bases"/>
