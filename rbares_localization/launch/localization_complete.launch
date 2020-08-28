@@ -6,8 +6,8 @@
   <arg name="prefix" default="$(arg robot_id)_"/>
   <arg name="kinematics" default="$(optenv ROBOT_KINEMATICS diff)"/>
   <arg name="localization_system" default="amcl" />
-  <arg name="run_icp" default="false"/>
-  <arg name="run_localization_3d" default="true"/>
+  <arg name="run_icp" default="true"/>
+  <arg name="run_localization_3d" default="false"/>
   <arg name="map_topic" default="localization" />
   <arg name="front_scan_topic" default="$(optenv ROBOT_NAVIGATION_FRONT_2D_SCAN front_laser/scan_filtered)"/>
 
