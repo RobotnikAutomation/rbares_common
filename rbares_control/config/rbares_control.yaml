@@ -79,6 +79,12 @@ robotnik_base_control:
   # this parameters are used to check if the steer joints are in the correct position to follow the command
   joint_oriented_minimum_threshold: 0.25 # in rad, this is the minimum orientation difference between reference and actual position
   joint_oriented_velocity_factor: 0.033 # in s, this is used to increase the minimum orientation as the robot increases its speed.
+  traction_threshold: 0.1
+  joint_acceleration_limit: 10.5
+  joint_deceleration_limit: 5.5
+  unsafe_zone_velocity_limit: 3.2
+  safe_zone_velocity_limit: 5.5
+  safety_zone_angle: 0.39269908169
 
 steer_controller:
   type: position_controllers/JointPositionController
