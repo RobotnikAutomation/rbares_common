@@ -11,7 +11,8 @@
 
   <xacro:macro name="fork" params="prefix parent *origin">
 
-    <joint name="${prefix}fork_joint" type="prismatic">
+    <!-- joint name="${prefix}fork_joint" type="prismatic"-->
+    <joint name="${prefix}fork_joint" type="fixed">
        <xacro:insert_block name="origin" />
        <parent link="${parent}"/>
        <child link="${prefix}fork_link" />

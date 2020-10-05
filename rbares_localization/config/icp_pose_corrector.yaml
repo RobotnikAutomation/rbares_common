@@ -1,0 +1,11 @@
+base_frame: $(arg base_frame)
+odom_frame: $(arg odom_frame)
+global_frame: $(arg global_frame)
+map_topic: $(arg map_topic)
+scan_topic: $(arg scan_topic)
+imput_pose_topic: $(arg input_pose_topic)
+output_pose_topic: $(arg output_pose_topic)
+max_allowed_distance_correction: 0.4
+max_allowed_angular_correction: 0.25
+minimum_coincidences: 5
+update_min_a: 4
