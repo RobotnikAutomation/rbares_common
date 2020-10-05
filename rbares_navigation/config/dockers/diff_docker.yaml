@@ -17,7 +17,7 @@ goal_threshold_x: 0.01
 goal_threshold_y: 0.01
 goal_threshold_theta: 0.05
 
-check_initial_limits: true
+check_initial_limits: false
 initial_maximum_distance_x: 2.5
 initial_maximum_distance_y: 2.5
 initial_minimum_distance_y: 0
@@ -30,10 +30,11 @@ initial_maximum_arc: 3.1416
 initial_maximum_yaw: 1
 
 publish_debug_frames: true
-offset_for_heading_adjustment: 1
+offset_for_heading_adjustment: 0.5
+offset_for_overshoot: 0.5
 
 tf_timeout: 0.5
-free_goal_velocity: false
+free_goal_velocity: true
 
 check_robot_is_moving_to_goal: false
 robot_moving_to_goal_delay: 3
