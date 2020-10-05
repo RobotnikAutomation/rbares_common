@@ -6,8 +6,8 @@
     <arg name="prefix" value="" unless="$(eval id_robot != '')" />
 
     <!-- overall namespace -->
-    <!--arg name="localization_ns" default="rbares_localization_3d" /-->
-    <arg name="localization_ns" default="" />
+    <!--arg name="localization_ns" default="localization_3d" /-->
+    <arg name="localization_ns" default="localization_3d" />
 
     <!-- which nodes to run -->
     <arg name="map_server" default="true" />
@@ -17,7 +17,7 @@
     <arg name="visualization" default="false" />
     
     <!-- to set the config file using a package path and a filename -->
-    <arg name="map_path" default="$(find rbares_localization_3d)/map" />
+    <arg name="map_path" default="$(find localization_3d)/map" />
     <arg name="map_file" default="" />
     
     <!-- or to set directly a file path -->
@@ -46,7 +46,7 @@
     <arg name="use_odom" default="" />
 
     <group ns="$(arg localization_ns)">
-        <include if="$(arg map_server)" file="$(find rbares_localization_3d)/launch/map_server.launch">
+        <include if="$(arg map_server)" file="$(find localization_3d)/launch/map_server.launch">
             <arg name="id_robot" value="$(arg id_robot)"/>
             <arg name="prefix" value="$(arg prefix)" />
             <arg name="map" default="$(arg map)" />
@@ -54,21 +54,21 @@
             <arg name="map_frame" value="$(arg map_frame)" />
         </include>
         
-        <include if="$(arg registration)" file="$(find rbares_localization_3d)/launch/aloam/rslidar_16_aloam_registration.launch">
+        <include if="$(arg registration)" file="$(find localization_3d)/launch/aloam/rslidar_16_aloam_registration.launch">
             <arg name="id_robot" value="$(arg id_robot)"/>
             <arg name="prefix" value="$(arg prefix)" />
             <arg name="base_frame" value="$(arg base_frame)" />
             <arg name="points_topic" default="$(arg points_topic)" />
         </include>
 
-        <include if="$(arg odometry)" file="$(find rbares_localization_3d)/launch/aloam/rslidar_16_aloam_odometry.launch">
+        <include if="$(arg odometry)" file="$(find localization_3d)/launch/aloam/rslidar_16_aloam_odometry.launch">
             <arg name="id_robot" value="$(arg id_robot)"/>
             <arg name="prefix" value="$(arg prefix)" />
             <arg name="base_frame" value="$(arg base_frame)" />
             <arg name="odom_frame" value="$(arg odom_frame)" />
         </include>
 
-        <include if="$(arg localization)" file="$(find rbares_localization_3d)/launch/mcl_3dl/rslidar_16_mcl_3dl.launch">
+        <include if="$(arg localization)" file="$(find localization_3d)/launch/mcl_3dl/rslidar_16_mcl_3dl.launch">
             <arg name="id_robot" value="$(arg id_robot)"/>
             <arg name="prefix" value="$(arg prefix)" />
             <arg name="base_frame" value="$(arg base_frame)" />
@@ -81,7 +81,7 @@
             <arg name="use_odom" default="$(arg use_odom)" />
         </include>
 
-        <include if="$(arg visualization)" file="$(find rbares_localization_3d)/launch/visualization.launch">
+        <include if="$(arg visualization)" file="$(find localization_3d)/launch/visualization.launch">
             <arg name="id_robot" value="$(arg id_robot)"/>
             <arg name="prefix" value="$(arg prefix)" />
             <arg name="config_file" default="rslidar_16_mcl_3dl.rviz" />
