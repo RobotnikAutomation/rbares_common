@@ -28,8 +28,7 @@
 
  <xacro:macro name="battery_case" params="prefix parent *origin">
 
-  <!-- joint name="${prefix}elevator_joint" type="prismatic"-->
-  <joint name="${prefix}elevator_joint" type="fixed">
+  <joint name="${prefix}elevator_joint" type="prismatic">
     <xacro:insert_block name="origin" />
     <parent link="${parent}"/>
     <child link="${prefix}battery_case_link" />
