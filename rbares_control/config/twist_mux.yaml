@@ -24,8 +24,8 @@ topics:
   timeout : 0.5
   priority: 1
 
-#locks:
-#- name    : e_stop
-#  topic   : robotnik_base_hw/emergency_stop
-#  timeout : 0.0
-#  priority: 255
+locks:
+- name    : e_stop
+  topic   : robotnik_base_hw/emergency_stop
+  timeout : 0.0
+  priority: 255
