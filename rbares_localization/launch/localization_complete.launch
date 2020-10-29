@@ -6,7 +6,7 @@
   <arg name="prefix" default="$(arg robot_id)_"/>
   <arg name="kinematics" default="$(optenv ROBOT_KINEMATICS diff)"/>
   <arg name="localization_system" default="amcl" />
-  <arg name="run_icp" default="true"/>
+  <arg name="run_icp" default="false"/>
   <arg name="run_localization_3d" default="false"/>
   <arg name="map_topic" default="localization" />
   <arg name="front_scan_topic" default="$(optenv ROBOT_NAVIGATION_FRONT_2D_SCAN front_laser/scan_filtered)"/>
@@ -19,7 +19,6 @@
   <arg name="localization_system_file" default="$(eval launch_folder + '/' + localization_system + '.launch')"/>
   <arg name="map_server_file" default="$(eval launch_folder + '/map_server.launch')"/>
   <arg name="icp_file" default="$(eval launch_folder + '/icp_pose_corrector.launch')"/>
-  <arg name="localization_3d_file" default="$(find localization_3d)/launch/localization_complete.launch"/>
 
   <!-- Robot initial position -->
   <arg name="x_init_pose" default="0"/>
@@ -33,14 +32,5 @@
     <include file="$(arg map_server_file)"/>
 
     <include if="$(arg run_icp)" file="$(arg icp_file)"/> 
-
-    <include if="$(arg run_localization_3d)" file="$(arg localization_3d_file)">
-      <arg name="id_robot" value="$(arg robot_id)" />
-      <!--arg name="prefix" value="$(arg prefix)" /-->
-      <arg name="localization_ns" value="localization_3d" />
-      <arg name="map_file" value="robotnik.pcd" />
-      <arg name="base_frame" value="$(arg prefix)base_footprint" />
-      <arg name="points_topic" value="top_lidar/points"/>
-    </include>
   </group>
 </launch>

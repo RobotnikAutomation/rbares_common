@@ -2,15 +2,15 @@ robotnik_base_control:
   type: rbares_controller/RbAresController
   traction:
     traction_joint:
-      joint_name: robot_traction_joint
+      joint_name: $(arg prefix)traction_joint
       max_speed: 27.27 # rad/s
   steer:
     steer_joint:
-      joint_name: robot_steer_joint
+      joint_name: $(arg prefix)steer_joint
       max_angle: 1.57 # rad
       min_angle: -1.57
-# elevator_joint:
-#   name: robot_elevator_platform_joint
+  #elevator_joint:
+  #   name: $(arg prefix)elevator_platform_joint
   limits:
     elevator_down:
       linear_speed_limit: 1.5 # m/s
@@ -47,8 +47,8 @@ robotnik_base_control:
       kd: 0
   set_velocity_pid_service: 'robotnik_base_hw/set_velocity_pid'
   hard_brake: false
-  odom_frame: robot_odom
-  robot_base_frame: robot_base_footprint
+  odom_frame: $(arg prefix)odom
+  robot_base_frame: $(arg prefix)base_footprint
   odom_broadcast_tf: true
   odom_topic: 'odom'
   wheel_base: 1.375

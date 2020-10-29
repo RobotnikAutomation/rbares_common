@@ -12,11 +12,12 @@
   <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen"
 	  args="
               robotnik_base_control
-              elevator_controller
               joint_read_state_controller
-              joint_read_command_controller">
+	      joint_read_command_controller
+	      elevator_controller">
 	      <!-- steer_controller
-	      traction_controller -->
+	      traction_controller
+              elevator_controller -->
   </node>
 
   <node pkg="twist_mux" type="twist_mux" name="twist_mux">
