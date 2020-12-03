@@ -1,16 +1,20 @@
 scan_filter_chain:
 
+#This filter removes all measurements from the sensor_msgs/LaserScan which are greater than upper_threshold or less than lower_threshold.
+#These points are "removed" by setting the corresponding range value to NaN, which is assumed to be an error case or
+#lower_replacement_value/upper_replacement_value. If use_message_range_limits is true, the range within the laserscan message is used. 
+
 - name: range
   type: laser_filters/LaserScanRangeFilter
   params:
     use_message_range_limits: false
     lower_thsccreshold: 0.05
-    upper_threshold: 5.0
+    upper_threshold: 20.0
     lower_replacement_value: 0.05
-    upper_replacement_value: 4.99
+    upper_replacement_value: 19.99
 
 - name: angle
   type: laser_filters/LaserScanAngularBoundsFilter
   params:
-    lower_angle: -2.35
-    upper_angle: 2.35
+    lower_angle: -2.3
+    upper_angle: 2.3
