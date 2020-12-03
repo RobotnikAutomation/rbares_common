@@ -41,9 +41,9 @@
 
   <!-- Wheel parameters -->
   <!-- x,y,z in translation from base_link to the center of the wheel -->
-  <xacro:property name="wheel_offset_x" value="0.077"/>
+  <xacro:property name="wheel_offset_x" value="0.09139"/>
   <xacro:property name="wheel_offset_y" value="0.0"/>
-  <xacro:property name="wheel_offset_z" value="-0.59"/>
+  <xacro:property name="wheel_offset_z" value="-0.59825"/>
 
   <!-- Fork wheel -->
   <xacro:property name="fork_wheel_offset_x" value="0.0"/>
@@ -51,19 +51,19 @@
   <xacro:property name="fork_wheel_offset_z" value="0.0"/>
 
   <!-- Battery_case -->
-  <xacro:property name="battery_case_offset_x" value="1.2975"/>
+  <xacro:property name="battery_case_offset_x" value="1.2955"/>
   <xacro:property name="battery_case_offset_y" value="0.0"/>
-  <xacro:property name="battery_case_offset_z" value="0.674"/>
+  <xacro:property name="battery_case_offset_z" value="0.685"/>
 
   <!-- Front_case -->
-  <xacro:property name="front_case_offset_x" value="1.2982"/>
+  <xacro:property name="front_case_offset_x" value="1.2955"/>
   <xacro:property name="front_case_offset_y" value="0.0"/>
-  <xacro:property name="front_case_offset_z" value="0.671"/>
+  <xacro:property name="front_case_offset_z" value="0.685"/>
 
   <!-- Front support wheel -->
-  <xacro:property name="front_support_wheel_offset_x" value="0.340"/>
-  <xacro:property name="front_support_wheel_offset_y" value="0.180"/>
-  <xacro:property name="front_support_wheel_offset_z" value="-0.675"/>
+  <xacro:property name="front_support_wheel_offset_x" value="0.09139"/>
+  <xacro:property name="front_support_wheel_offset_y" value="0.224"/>
+  <xacro:property name="front_support_wheel_offset_z" value="-0.690"/>
 
   <!--  FORK CAMERAS  -->
   <xacro:property name="fork_camera_x" value="1.545" />
@@ -76,9 +76,9 @@
   <xacro:property name="front_laser_z" value="-0.38735" />
 
   <!-- RS_lIDAR -->
-  <xacro:property name="top_lidar_offset_x" value="0.085" />
+  <xacro:property name="top_lidar_offset_x" value="0.100" />
   <xacro:property name="top_lidar_offset_y" value="0.0" />
-  <xacro:property name="top_lidar_offset_z" value="0.205" />
+  <xacro:property name="top_lidar_offset_z" value="0.384" />
 
   <!-- REGISTERS -->
   <xacro:property name="front_register_offset_x" value="0.452" />

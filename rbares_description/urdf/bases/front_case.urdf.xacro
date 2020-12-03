@@ -36,7 +36,7 @@
        <visual>
          <origin xyz="0 0 0" rpy="0 0 0" />
          <geometry>
-           <mesh filename="package://rbares_description/meshes/bases/front_case.stl"/>
+           <mesh filename="package://rbares_description/meshes/bases/front_case_v2.stl"/>
          </geometry>
          <material name="dark_grey">
            <color rgba="0.4 0.4 0.4 1.0"/>
@@ -45,7 +45,7 @@
        <collision>
          <origin xyz="0 0 0" rpy="0 0 0" />
          <geometry>
-           <mesh filename="package://rbares_description/meshes/bases/front_case.stl"/>
+           <mesh filename="package://rbares_description/meshes/bases/front_case_v2.stl"/>
          </geometry>
        </collision>
      </link>
@@ -60,6 +60,17 @@
 
 		 <!--xacro:led prefix="${prefix}">
 		 </xacro:led-->
+
+    <gazebo reference="${prefix}front_case_link">
+      <visual>
+        <material>
+          <ambient>0.0 0.0 0.0 1.0</ambient>
+          <diffuse>0.2 0.2 0.2 1.0</diffuse>
+          <specular>0.508273 0.508273 0.508273 1.0</specular>
+          <emissive>0.0 0.0 0.0 0.0</emissive>
+        </material>
+      </visual>
+    </gazebo>
 
   </xacro:macro>
 </robot>
