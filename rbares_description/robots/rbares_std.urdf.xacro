@@ -12,8 +12,8 @@
   <xacro:include filename="$(find rbares_description)/urdf/bases/rbares.urdf.xacro" />
 
   <!-- Import orbbec embedded S camera and orbbec astra -->
-  <xacro:include filename="$(find rbares_description)/urdf/astra_camera/embedded_s.urdf.xacro" />
-  <xacro:include filename="$(find rbares_description)/urdf/astra_camera/orbbec_astra.urdf.xacro" />
+  <!--xacro:include filename="$(find rbares_description)/urdf/astra_camera/embedded_s.urdf.xacro" />
+  <xacro:include filename="$(find rbares_description)/urdf/astra_camera/orbbec_astra.urdf.xacro" /-->
 
   <!-- Import PALLET-TRUCK wheels -->
   <xacro:include filename="$(find rbares_description)/urdf/wheels/motor_wheel.urdf.xacro" />
@@ -148,13 +148,14 @@
       <origin xyz="${front_laser_x} ${front_laser_y} ${front_laser_z}" rpy="${PI} 0 0"/>
   </xacro:sensor_sick_s300>
 
-  <xacro:orbbec_astra prefix="${prefix}rear_camera" parent="${prefix}rear_register_link" prefix_topic="${robot_id}/rear_camera">
+  <!-- TODO: push orbbec on robotnik_sensor -->
+  <!--xacro:orbbec_astra prefix="${prefix}rear_camera" parent="${prefix}rear_register_link" prefix_topic="${robot_id}/rear_camera">
         <origin xyz="-0.019 0 0" rpy="0 0 0"/>
   </xacro:orbbec_astra>
 
   <xacro:sensor_orbbec_astra_embedded_s prefix="${prefix}left_fork_camera" parent="${prefix}left_fork_sensor_link" prefix_topic="${robot_id}/left_fork_camera" >
         <origin xyz="0 0 0" rpy="0 0 0"/>
-  </xacro:sensor_orbbec_astra_embedded_s>
+  </xacro:sensor_orbbec_astra_embedded_s-->
 
   <xacro:sensor_imu_hector prefix="${prefix}imu" parent="${prefix}base_link">
     <origin xyz="${imu_offset_x} -${imu_offset_y} ${imu_offset_z}" rpy="0 0 0"/>
