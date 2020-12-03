@@ -5,14 +5,19 @@
   <arg name="robot_id" default="$(optenv ROBOT_ID robot)"/>
   <arg name="prefix" default="$(arg robot_id)_"/>
   <arg name="kinematics" default="$(optenv ROBOT_KINEMATICS diff)"/>
+  <arg name="localization_package" default="$(optenv LOCALIZATION_PACKAGE rbares_localization)"/>
+
   <arg name="localization_system" default="amcl" />
+
   <arg name="run_icp" default="false"/>
   <arg name="run_localization_3d" default="false"/>
-  <arg name="map_topic" default="localization" />
+
+  <arg name="config_folder" default="$(eval find(localization_package)+'/maps')" />
+  <arg name="map_file" default="empty/map_empty.yaml"/>
+  <arg name="map_server_path" default="$(eval config_folder + '/' + map_file)"/>  <arg name="map_topic" default="localization" />
   <arg name="front_scan_topic" default="$(optenv ROBOT_NAVIGATION_FRONT_2D_SCAN front_laser/scan_filtered)"/>
 
   <!-- What localization config package to use -->
-  <arg name="localization_package" default="$(optenv LOCALIZATION_PACKAGE rbares_localization)"/>
   <arg name="launch_folder" default="$(eval find(localization_package) + '/launch')" />
   
   <!-- Files -->
@@ -29,7 +34,9 @@
 
     <include file="$(arg localization_system_file)"/>
 
-    <include file="$(arg map_server_file)"/>
+    <include file="$(arg map_server_file)">
+      <arg name="map_file" value="$(arg map_file)"/>
+    </include>  
 
     <include if="$(arg run_icp)" file="$(arg icp_file)"/> 
   </group>
