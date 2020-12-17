@@ -14,7 +14,7 @@
               robotnik_base_control
               joint_read_state_controller
 	      joint_read_command_controller
-	      elevator_controller">
+	      robotnik_elevator_controller">
 	      <!-- steer_controller
 	      traction_controller
               elevator_controller -->
