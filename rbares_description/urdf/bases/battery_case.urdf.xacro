@@ -3,7 +3,8 @@
 
   <xacro:include filename="$(find rbares_description)/urdf/inertia.urdf.xacro" />
 
-  <xacro:include filename="$(find rbares_description)/urdf/elevator/fork.urdf.xacro" />
+  <!--xacro:include filename="$(find rbares_description)/urdf/elevator/fork.urdf.xacro" /-->
+  <xacro:include filename="$(find rbares_description)/urdf/elevator/fork_test.urdf.xacro" />
 
   <xacro:include filename="$(find rbares_description)/urdf/bases/protection.urdf.xacro" />
 
