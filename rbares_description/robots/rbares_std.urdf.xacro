@@ -144,17 +144,17 @@
       <origin xyz="${front_laser_x} ${front_laser_y} ${front_laser_z}" rpy="${PI} 0 0"/>
   </xacro:sensor_sick_s300>
 
-  <xacro:sensor_intel_d435 prefix="${prefix}left_fork_camera" parent="${prefix}left_fork_sensor_link" prefix_topic="${robot_id}/left_fork_camera" use_nominal_extrinsics="true" >
+  <!--xacro:sensor_intel_d435 prefix="${prefix}left_fork_camera" parent="${prefix}left_fork_sensor_link" prefix_topic="${robot_id}/left_fork_camera" use_nominal_extrinsics="true" >
         <origin xyz="0 0 0" rpy="0 -${5.0*PI/180.0} 0"/>
   </xacro:sensor_intel_d435>
 
   <xacro:sensor_intel_d435 prefix="${prefix}right_fork_camera" parent="${prefix}right_fork_sensor_link" prefix_topic="${robot_id}/right_fork_camera" use_nominal_extrinsics="true" >
         <origin xyz="0 0 0" rpy="0 -${5.0*PI/180.0} 0"/>
-  </xacro:sensor_intel_d435>
+  </xacro:sensor_intel_d435-->
 
-  <xacro:sensor_intel_d435 prefix="${prefix}rear_camera" parent="${prefix}rear_register_link" prefix_topic="${robot_id}/rear_camera" use_nominal_extrinsics="true" >
-        <origin xyz="0 0 0" rpy="0 ${5.0*PI/180.0} 0"/>
-  </xacro:sensor_intel_d435>
+  <!--xacro:sensor_intel_d435 prefix="${prefix}rear_camera" parent="${prefix}rear_register_link" prefix_topic="${robot_id}/rear_camera" use_nominal_extrinsics="true" >
+        <origin xyz="0.07 0 0" rpy="0 ${5.0*PI/180.0} 0"/>
+  </xacro:sensor_intel_d435-->
 
   <xacro:sensor_imu_hector prefix="${prefix}imu" parent="${prefix}base_link">
     <origin xyz="${imu_offset_x} -${imu_offset_y} ${imu_offset_z}" rpy="0 0 0"/>
