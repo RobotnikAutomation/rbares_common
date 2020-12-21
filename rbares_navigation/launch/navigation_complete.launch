@@ -16,7 +16,7 @@
   <arg name="has_move_base" default="$(optenv ROBOT_HAS_MOVE_BASE true)"/>
 
   <!-- Dockers arguments -->
-  <arg name="has_docker" default="$(optenv ROBOT_HAS_DOCKER true)"/>
+  <arg name="has_docker" default="$(optenv ROBOT_HAS_DOCKER false)"/>
   <arg name="run_camera_docker" default="$(optenv ROBOT_DOCKER_RUN_CAMERA false)"/>
   <arg name="run_laser_docker" default="$(optenv ROBOT_DOCKER_RUN_LASER false)"/>
   <arg name="run_laser_filters" default="$(optenv ROBOT_RUN_LASER_FILTERS true)"/>
