@@ -90,7 +90,7 @@
           </clip>
         </camera>
         <plugin name="${prefix}_controller" filename="libgazebo_ros_openni_kinect.so">
-          <cameraName>${prefix_topic}</cameraName>
+	        <cameraName>robot_left_fork_camera</cameraName>
           <alwaysOn>true</alwaysOn>
           <updateRate>10</updateRate>
           <imageTopicName>rgb/image_raw</imageTopicName>
