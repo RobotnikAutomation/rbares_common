@@ -87,8 +87,8 @@ robotnik_base_control:
   safety_zone_angle: 0.39269908169
   soft_limit_zone: 1
 
-robotnik_elevator_controller:
-  type: "robotnik_elevator_controller/RobotnikElevatorController"
+rbares_elevator_controller:
+  type: "rbares_elevator_controller/RbAresElevatorController"
   joint:
     elevator_joint:
       name: robot_elevator_joint
