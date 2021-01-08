@@ -67,6 +67,14 @@
      <gazebo reference="${prefix}fork_link">
        <mu1>100</mu1>
        <mu2>100</mu2>
+       <visual>
+        <material>
+          <ambient>0.0 0.0 0.0 1.0</ambient>
+          <diffuse>0.2 0.2 0.2 1.0</diffuse>
+          <specular>0.508273 0.508273 0.508273 1.0</specular>
+          <emissive>0.0 0.0 0.0 0.0</emissive>
+        </material>
+      </visual>
      </gazebo>
 
     <joint name="${prefix}fork_sensor_joint" type="fixed">
