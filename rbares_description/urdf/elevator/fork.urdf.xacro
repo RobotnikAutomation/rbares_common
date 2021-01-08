@@ -48,7 +48,7 @@
        </collision>
      </link>
 
-     <transmission name="${prefix}fork_transmission">
+     <!--transmission name="${prefix}fork_transmission">
        <type>transmission_interface/SimpleTransmission</type>
        <joint name="${prefix}fork_joint">
          <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
@@ -57,7 +57,7 @@
          <hardwareInterface>hardware_interface/PositionActuatorInterface</hardwareInterface>
          <mechanicalReduction>${traction_mechanical_reduction}</mechanicalReduction>
        </actuator>
-     </transmission>
+     </transmission-->
 
      <!-- ***************** -->
      <!-- GAZEBO PROPERTIES -->
