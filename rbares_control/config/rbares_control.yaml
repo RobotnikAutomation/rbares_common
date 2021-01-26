@@ -70,7 +70,7 @@ robotnik_base_control:
   angular_velocity_covariance: 0.0000000001
   set_digital_output_service_hw: robotnik_modbus_io/write_digital_output
   io_topic: robotnik_modbus_io/input_output
-  has_elevator: true
+  has_elevator: false
   elevator_position_up: 0.05 # linear height (m)
   elevator_position_down: 0.0
   elevator_digital_output_up: 23 
@@ -88,6 +88,17 @@ robotnik_base_control:
   safe_zone_velocity_limit: 5.5
   safety_zone_angle: 0.39269908169
   soft_limit_zone: 1
+
+
+rbares_elevator_controller:
+  type: "rbares_elevator_controller/RbAresElevatorController"
+  joint:
+    elevator_joint:
+      name: robot_elevator_joint
+  elevator_position_up: 10
+  elevator_position_down: 0.0
+  # delay time to perform the elevation
+  elevation_action_time: 0.1
 
 steer_controller:
   type: position_controllers/JointPositionController
