@@ -8,7 +8,6 @@
   <arg name="localization_package" default="$(optenv LOCALIZATION_PACKAGE rbares_localization)"/>
 
   <arg name="localization_system" default="amcl" />
-
   <arg name="run_icp" default="false"/>
   <arg name="run_localization_3d" default="false"/>
 
@@ -36,8 +35,17 @@
 
     <include file="$(arg map_server_file)">
       <arg name="map_file" value="$(arg map_file)"/>
-    </include>  
+    </include>
 
-    <include if="$(arg run_icp)" file="$(arg icp_file)"/> 
+    <!--include if="$(arg run_icp)" file="$(arg icp_file)"/--> 
+
+    <!--include if="$(arg run_localization_3d)" file="$(arg localization_3d_file)">
+      <arg name="id_robot" value="$(arg robot_id)" />
+      <!- -arg name="prefix" value="$(arg prefix)" /- ->
+      <arg name="localization_ns" value="localization_3d" />
+      <arg name="map_file" value="robotnik.pcd" />
+      <arg name="base_frame" value="$(arg prefix)base_footprint" />
+      <arg name="points_topic" value="top_lidar/points"/>
+    </include-->
   </group>
 </launch>

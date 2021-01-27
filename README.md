@@ -30,6 +30,9 @@ sudo dpkg -i binaries/ros-melodic-robotnik-move_1.0.0-0bionic_amd64.deb
 ```bash
 sudo dpkg -i binaries/ros-melodic-robotnik-docker_1.0.0-0bionic_amd64.deb  
 ```
+```bash
+sudo dpkg -i binaries/ros-melodic-rbares-elevator-controller_0.0.0-0bionic_amd64.deb
+```
 
 ## Packages
 

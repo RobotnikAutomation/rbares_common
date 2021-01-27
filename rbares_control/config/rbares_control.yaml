@@ -51,7 +51,9 @@ robotnik_base_control:
   robot_base_frame: $(arg prefix)base_footprint
   odom_broadcast_tf: true
   odom_topic: 'odom'
-  wheel_base: 1.387
+  wheel_base: 1.375
+  wheel_base_elevator_up: 1.37
+  wheel_base_elevator_down: 1.375
   track_width: 0.46
   wheel_diameter: 0.249
   cmd_watchdog_duration: 0.2
@@ -71,10 +73,10 @@ robotnik_base_control:
   has_elevator: false
   elevator_position_up: 0.05 # linear height (m)
   elevator_position_down: 0.0
-  elevator_digital_output_up: 5
-  elevator_digital_output_down: 6
-  elevator_digital_input_up: 48
-  elevator_digital_input_down: 47
+  elevator_digital_output_up: 23 
+  elevator_digital_output_down: 22
+  elevator_digital_input_up: 316
+  elevator_digital_input_down: 315
   reverse_logic: false # Make sure what logic is your robot using
   # this parameters are used to check if the steer joints are in the correct position to follow the command
   joint_oriented_minimum_threshold: 0.25 # in rad, this is the minimum orientation difference between reference and actual position

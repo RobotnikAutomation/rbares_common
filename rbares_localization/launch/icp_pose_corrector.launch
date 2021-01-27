@@ -27,7 +27,7 @@
         <param name="fixed_frame" value="$(arg prefix)odom"/>
         <param name="destination_frame" value="$(arg prefix)base_footprint"/>
         <param name="cloud_destination_topic" value="cloud"/>
-        <param name="scan_destination_topic" value="scan"/>
+        <param name="scan_destination_topic" value="$(arg scan_topic)"/>
         <param name="check_topic_type" value="false" />
 
         <param name="laserscan_topics" value="front_laser/scan" /> <!-- LIST OF THE LASER SCAN TOPICS TO SUBSCRIBE -->

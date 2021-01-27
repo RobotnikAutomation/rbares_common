@@ -30,7 +30,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-		      <!--mesh filename="package://rbares_description/meshes/wheels/rbares_wheel_fake.dae"/-->
+          <!--mesh filename="package://rbares_description/meshes/wheels/rbares_wheel_fake.dae"/-->
           <sphere radius="${castor_wheel_radius}"/>
         </geometry>
         <material name="dark_grey">
