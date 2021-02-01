@@ -170,7 +170,7 @@
   <!-- Rear -->
   <joint name="${prefix}rear_register_joint" type="fixed">
     <origin xyz="${rear_register_offset_x} ${rear_register_offset_y} ${rear_register_offset_z}" rpy="0 0 -${PI}"/>
-    <parent link="${prefix}front_case_link"/>
+    <parent link="${prefix}battery_case_link"/>
     <child link="${prefix}rear_register_link" />
   </joint>
 
