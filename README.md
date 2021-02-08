@@ -13,25 +13,8 @@ Install external dependencies:
 Also you need to install dependencies, you need to execute:
 
 ```bash
-sudo dpkg -i binaries/ros-melodic-robotnik-msgs_1.1.0-0bionic_amd64.deb
-```
-```bash
-sudo dpkg -i binaries/ros-melodic-rcomponent_1.1.0-0bionic_amd64.deb 
-```
-```bash
-sudo dpkg -i binaries/ros-melodic-rbares-controller_0.0.0-0bionic_amd64.deb 
-```
-```bash
-sudo dpkg -i binaries/ros-melodic-robotnik-navigation-msgs_0.0.0-0bionic_amd64.deb 
-```
-```bash
-sudo dpkg -i binaries/ros-melodic-robotnik-move_1.0.0-0bionic_amd64.deb 
-```
-```bash
-sudo dpkg -i binaries/ros-melodic-robotnik-docker_1.0.0-0bionic_amd64.deb  
-```
-```bash
-sudo dpkg -i binaries/ros-melodic-rbares-elevator-controller_0.0.0-0bionic_amd64.deb
+cd binaries
+./install.sh
 ```
 
 ## Packages
@@ -42,7 +25,7 @@ The urdf, meshes, and other elements needed in the description are contained her
 
 ### rbares_control
 
-This package contains the launch and configuration files to spawn the robot controllers with the ROS controller_manager. 
+This package contains the launch and configuration files to spawn the robot controllers with the ROS controller_manager.
 
 ### rbares_navigation
 
