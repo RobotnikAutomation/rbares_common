@@ -8,9 +8,9 @@ Install external dependencies:
 
 - [joint_read_command_controller](https://github.com/RobotnikAutomation/joint_read_command_controller) : git clone https://github.com/RobotnikAutomation/joint_read_command_controller
 
-- [robotnik_sensors](https://github.com/RobotnikAutomation/robotnik_sensors) : git clone -b melodic-devel https://github.com/RobotnikAutomation/robotnik_sensors
+- [robotnik_sensors](https://github.com/RobotnikAutomation/robotnik_sensors) : git clone -b melodic-master https://github.com/RobotnikAutomation/robotnik_sensors
 
-Also you need to install dependencies, you need to execute:
+Also you need to install binaries, you need to execute:
 
 ```bash
 cd binaries
@@ -21,7 +21,7 @@ cd binaries
 
 ### rbares_description
 
-The urdf, meshes, and other elements needed in the description are contained here. The standard camera configurations have been included (w/wo sphere_camera, w/wo axis_camera, etc.). The package includes also some launch files to publish the robot state and to test the urdf files in rviz.
+The urdf, meshes, and other elements needed in the description are contained here. The package includes also some launch files to publish the robot state and to test the urdf files in rviz.
 
 ### rbares_control
 
@@ -29,12 +29,9 @@ This package contains the launch and configuration files to spawn the robot cont
 
 ### rbares_navigation
 
-This package contains the configuration for running the Navigation stack of the Rb Ares robot (ROS Navigation, Robotnik Navigation, etc) (Read rbares_navigation/README.md)
+This package contains the configuration for running the Navigation stack of the Rb Ares (ROS Navigation, Robotnik Navigation, etc)
 
 ### rbares_localization
 
-This package contains the configuration for running AMCL and map_server.
+This package contains the configuration for running AMCL, ICP, map_server and map_saver.
 
-### rbares_perception
-
-This package contains the launch files and configuration for running locator node.
