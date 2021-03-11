@@ -109,19 +109,19 @@
   <xacro:rbares prefix="${prefix}" publish_bf="true"/> <!-- BASE -->
 
   <xacro:motor_wheel prefix="${prefix}" parent="${prefix}front_case_link">
-      <origin xyz="${wheel_offset_x} ${wheel_offset_y} ${wheel_offset_z}" rpy="0 0 0"/>
+    <origin xyz="${wheel_offset_x} ${wheel_offset_y} ${wheel_offset_z}" rpy="0 0 0"/>
   </xacro:motor_wheel>
 
   <xacro:fork_wheel prefix="${prefix}left_fork_" parent="${prefix}base_link">
-      <origin xyz="${fork_wheel_offset_x} ${fork_wheel_offset_y} ${fork_wheel_offset_z}" rpy="0 0 0"/>
+    <origin xyz="${fork_wheel_offset_x} ${fork_wheel_offset_y} ${fork_wheel_offset_z}" rpy="0 0 0"/>
   </xacro:fork_wheel>
 
   <xacro:fork_wheel prefix="${prefix}right_fork_" parent="${prefix}base_link">
-      <origin xyz="${fork_wheel_offset_x} -${fork_wheel_offset_y} ${fork_wheel_offset_z}" rpy="0 0 0"/>
+    <origin xyz="${fork_wheel_offset_x} -${fork_wheel_offset_y} ${fork_wheel_offset_z}" rpy="0 0 0"/>
   </xacro:fork_wheel>
 
   <xacro:battery_case prefix="${prefix}" parent="${prefix}base_link">
-      <origin xyz="${battery_case_offset_x} -${battery_case_offset_y} ${battery_case_offset_z}" rpy="0 0 0"/>
+    <origin xyz="${battery_case_offset_x} -${battery_case_offset_y} ${battery_case_offset_z}" rpy="0 0 0"/>
   </xacro:battery_case>
 
   <xacro:front_case prefix="${prefix}" parent="${prefix}base_link">
@@ -129,27 +129,27 @@
   </xacro:front_case>
 
   <xacro:support_wheel prefix="${prefix}front_left_" parent="${prefix}front_case_link">
-      <origin xyz="${front_support_wheel_offset_x} ${front_support_wheel_offset_y} ${front_support_wheel_offset_z}" rpy="0 0 0"/>
+    <origin xyz="${front_support_wheel_offset_x} ${front_support_wheel_offset_y} ${front_support_wheel_offset_z}" rpy="0 0 0"/>
   </xacro:support_wheel>
 
   <xacro:support_wheel prefix="${prefix}front_right_" parent="${prefix}front_case_link">
-      <origin xyz="${front_support_wheel_offset_x} -${front_support_wheel_offset_y} ${front_support_wheel_offset_z}" rpy="0 0 0"/>
+    <origin xyz="${front_support_wheel_offset_x} -${front_support_wheel_offset_y} ${front_support_wheel_offset_z}" rpy="0 0 0"/>
   </xacro:support_wheel>
 
   <xacro:sensor_rslidar_16 prefix="${prefix}top_3d_lidar" parent="${prefix}front_case_link" prefix_topic="top_lidar" gpu="${gpu}">
-      <origin xyz="${top_lidar_offset_x} ${top_lidar_offset_y} ${top_lidar_offset_z}" rpy="0 0 0"/>
+    <origin xyz="${top_lidar_offset_x} ${top_lidar_offset_y} ${top_lidar_offset_z}" rpy="0 0 0"/>
   </xacro:sensor_rslidar_16>
 
   <xacro:sensor_sick_s300 prefix="${prefix}front_laser" parent="${prefix}front_case_link" prefix_topic="front_laser" min_angle="-2.35" max_angle="2.35" gpu="${gpu}" >
-      <origin xyz="${front_laser_x} ${front_laser_y} ${front_laser_z}" rpy="${PI} 0 0"/>
+    <origin xyz="${front_laser_x} ${front_laser_y} ${front_laser_z}" rpy="${PI} 0 0"/>
   </xacro:sensor_sick_s300>
 
   <xacro:sensor_orbbec_astra prefix="${prefix}rear_camera" parent="${prefix}rear_register_link" prefix_topic="${robot_id}/rear_camera">
-        <origin xyz="-0.019 0 0" rpy="0 0 0"/>
+    <origin xyz="-0.019 0 0" rpy="0 0 0"/>
   </xacro:sensor_orbbec_astra>
 
   <xacro:sensor_orbbec_astra_embedded_s prefix="${prefix}left_fork_camera" parent="${prefix}left_fork_sensor_link" prefix_topic="${robot_id}/left_fork_camera" >
-        <origin xyz="0 0 0" rpy="0 0 0"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
   </xacro:sensor_orbbec_astra_embedded_s>
 
   <xacro:sensor_imu_hector prefix="${prefix}imu" parent="${prefix}base_link">
