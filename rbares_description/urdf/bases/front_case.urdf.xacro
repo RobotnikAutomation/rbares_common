@@ -58,8 +58,7 @@
 				<origin xyz="0.1993 0.43 0.197" rpy="0 0 0" />
 		 </xacro:line_projector-->
 
-		 <xacro:led prefix="${prefix}">
-		 </xacro:led>
+		 <xacro:led prefix="${prefix}"/>
 
     <gazebo reference="${prefix}front_case_link">
       <visual>

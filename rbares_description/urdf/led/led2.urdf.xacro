@@ -55,11 +55,11 @@
             <emissive>0 0 0 1</emissive>
           </material>
         </visual>
-        <light name="${prefix}led_light" type="point">
+        <!--light name="${prefix}led_light" type="point">
           <pose>0 0 0 0 0 0</pose>
           <attenuation>
             <range>20</range>
-            <!--linear>0.10</linear-->
+            <!- -linear>0.10</linear- ->
           </attenuation>
           <diffuse>0 0 0 1</diffuse>
           <specular>0 0 0 1</specular>
@@ -80,7 +80,7 @@
             <iyz>0</iyz>
             <izz>0.0001</izz>
           </inertia>
-        </inertial>
+        </inertial-->
       </link>
       <!--plugin name='light_control' filename='libLedPlugin.so'>
         <light>
