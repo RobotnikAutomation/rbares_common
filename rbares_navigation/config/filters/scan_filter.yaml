@@ -11,10 +11,10 @@ scan_filter_chain:
     lower_thsccreshold: 0.05
     upper_threshold: 20.0
     lower_replacement_value: 0.05
-    upper_replacement_value: 19.99
+    upper_replacement_value: 30
 
 - name: angle
   type: laser_filters/LaserScanAngularBoundsFilter
   params:
-    lower_angle: -2.3
-    upper_angle: 2.3
+    lower_angle: -2.28
+    upper_angle: 2.28
