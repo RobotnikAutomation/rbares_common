@@ -46,7 +46,7 @@
       <inertial>
         <mass value="${fork_wheel_mass}" />
         <origin xyz="0 0 0" />
-        <cylinder_inertia  m="${fork_wheel_mass}" r="${fork_wheel_radius}" h="${fork_wheel_length}" />
+        <xacro:cylinder_inertia  m="${fork_wheel_mass}" r="${fork_wheel_radius}" h="${fork_wheel_length}" />
       </inertial>
     </link>
 

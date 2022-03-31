@@ -55,7 +55,7 @@
     <inertial>
       <mass value="${battery_case_mass}" />
       <origin xyz="-0.2 0.0 -0.35"/>
-      <solid_cuboid_inertia m="${battery_case_mass}" h="${battery_case_size_y}" d="${battery_case_size_z}" w="${battery_case_size_x}"/>
+      <xacro:solid_cuboid_inertia m="${battery_case_mass}" h="${battery_case_size_y}" d="${battery_case_size_z}" w="${battery_case_size_x}"/>
     </inertial>
   </link>
 

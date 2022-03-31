@@ -52,7 +52,7 @@
       <inertial>
         <mass value="${wheel_mass}" />
         <origin xyz="0 0 0"/>
-        <cylinder_inertia m="${wheel_mass}" r="${wheel_width}" h="${wheel_radius}" />
+        <xacro:cylinder_inertia m="${wheel_mass}" r="${wheel_width}" h="${wheel_radius}" />
       </inertial>
     </link>
 
@@ -91,7 +91,7 @@
       <inertial>
         <mass value="${wheel_mass}" />
         <origin xyz="0.000063 0 0.000465"/>
-        <cylinder_inertia  m="${wheel_mass}" r="${wheel_radius}" h="${wheel_width}" />
+        <xacro:cylinder_inertia  m="${wheel_mass}" r="${wheel_radius}" h="${wheel_width}" />
       </inertial>
     </link>
 

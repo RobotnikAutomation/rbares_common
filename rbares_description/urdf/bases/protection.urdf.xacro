@@ -19,7 +19,7 @@
      <inertial>
        <mass value="0.01" />
        <origin xyz="0 0 0"/>
-       <solid_cuboid_inertia m="0.001" h="0.001" d="0.001" w="0.001"/>
+       <xacro:solid_cuboid_inertia m="0.001" h="0.001" d="0.001" w="0.001"/>
      </inertial>
    </link>
 

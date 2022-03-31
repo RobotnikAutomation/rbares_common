@@ -148,6 +148,10 @@
     <origin xyz="-0.019 0 0" rpy="0 0 0"/>
   </xacro:sensor_orbbec_astra>
 
+  <!--xacro:sensor_intel_d435 prefix="${prefix}mast_front_camera" parent="${prefix}base_link" prefix_topic="mast_front_camera">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </xacro:sensor_intel_d435-->
+
   <xacro:sensor_orbbec_astra_embedded_s prefix="${prefix}left_fork_camera" parent="${prefix}left_fork_sensor_link" prefix_topic="left_fork_camera" >
     <origin xyz="0 0 0" rpy="0 0 0"/>
   </xacro:sensor_orbbec_astra_embedded_s>
